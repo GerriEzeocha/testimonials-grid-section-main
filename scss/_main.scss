@@ -1,0 +1,146 @@
+section{
+    padding: 1.3rem;
+    border-radius: 0.625rem;
+}
+
+.daniel {
+    grid-column: 1/3;
+    grid-row: 1;
+    background-color: $modViolet;
+    background-image: url("/images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: 80% 1%;
+    background-size: 21%;
+
+    .author_pic > img {
+        border: 0.125rem solid hsl(263, 100%, 82%)
+        
+    }
+
+    @include breakpoints(tablet){
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    @include breakpoints(phablet){
+        grid-column: 1;
+        grid-row: 1/3;
+        background-size: 34%;
+        background-position: 92% 1%;
+    }
+}
+
+.jonathan {
+    grid-column: 3;
+    grid-row: 1;
+    background-color: $vDgrayishBlue;
+
+    @include breakpoints(tablet){
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    @include breakpoints(phablet){
+        grid-column: 1;   
+        grid-row: 3;
+    }
+}
+
+.jeanette {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: $white;
+
+    @include breakpoints(tablet){
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    @include breakpoints(phablet){
+        grid-column: 1;
+        grid-row: 4 ;
+    }
+}
+
+.patrick {
+    grid-column: 2/4;
+    grid-row: 2;
+    background-color: $vDblackishBlue;
+
+    .author_pic > img {
+        border: 0.125rem solid $modViolet;
+        
+    }
+
+    @include breakpoints(tablet){
+        grid-column: 1/3;
+        grid-row: 2;
+        justify-self: stretch;
+    }
+
+    @include breakpoints(phablet){
+        grid-column: 1;
+        grid-row: 5/7;
+    }
+}
+
+.kira {
+    grid-column: 4;
+    grid-row: 1/3;
+    background-color: $white;
+
+    @include breakpoints(tablet){
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    @include breakpoints(phablet){
+        grid-column: 1;
+        grid-row: 7/8;
+    }
+}
+
+.author {
+    display: flex;
+}
+
+.author_pic {  
+
+    img {
+        width: 60%;
+        border-radius: 50%;
+    }
+}
+
+.author_info {
+    p {
+        margin: 0rem 0rem 2px 0rem;
+    }
+}
+
+
+.heading_txt {
+    font-weight: 700;
+    font-size: 1.1875rem;
+    margin-right: 0.6875;
+}
+
+.par_text {
+    opacity: 70%;
+}
+
+.daniel, .jonathan, .patrick {
+    color: $white;
+
+    .author_title {
+        opacity: 50%;
+    }
+}
+
+.jeanette, .kira {
+    color: $vDgrayishBlue;
+
+    .author_title {
+        opacity: 50%;
+    }
+}

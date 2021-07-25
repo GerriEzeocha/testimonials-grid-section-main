@@ -1,0 +1,64 @@
+/** Variables primary **/
+$modViolet: hsl(263, 55%, 52%); 
+$vDgrayishBlue: hsl(217, 19%, 35%);
+$vDblackishBlue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+
+/**Neutral**/
+$lightGray: hsl(0, 0%, 81%);
+$lGrayishBlue: hsl(210, 46%, 95%);
+
+html {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 0.8125rem;
+    margin: 0;
+    max-width: 90rem;
+    min-width: 23.4375rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $lGrayishBlue;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.container {
+    width: 65rem;
+    height: 37rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 16.875rem 15.313rem;
+    gap: 1.5rem;
+    align-content: center;
+
+    @include breakpoints(tablet){
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 22rem;
+        height: 55rem;
+        width: 50rem;
+    }
+
+    @include breakpoints(phablet){
+        margin-top: 1rem;
+        grid-template-columns: minmax(170px, 1fr);
+        width: 18.125rem;
+        height: 114rem;
+    }
+    
+}
+
+.attribution {
+    color: $vDgrayishBlue;
+    a{
+        text-decoration: none;
+        color: $vDgrayishBlue;
+    }
+}

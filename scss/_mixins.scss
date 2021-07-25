@@ -1,0 +1,10 @@
+$breakpoints: (
+    "tablet": "62em",
+    "phablet": "37em"
+);
+
+@mixin breakpoints($size) {
+    @media(max-width: map-get($breakpoints, $size )){
+        @content;
+    } 
+}
